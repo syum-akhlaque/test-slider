@@ -1,0 +1,28 @@
+-
+    const cItems = [
+        {
+            img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
+            title: 'Hello',
+            details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium debitis voluptatem nam commodi? Cumque, deserunt.'
+        },
+        {
+            img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
+            title: 'Hello',
+            details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium debitis voluptatem nam commodi? Cumque, deserunt.'
+        },
+        {
+            img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png',
+            title: 'Hello',
+            details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium debitis voluptatem nam commodi? Cumque, deserunt.'
+        },
+    ]
+mixin caroselItems
+    .container
+        .row.text-center
+            each item in cItems
+                .col-md-4.py-5.d-flex.justify-content-center
+                    .card.p-2(style='width:18rem')
+                        .card-body
+                            img(src=`${item.img}` style ={width:'150px'} alt = 'image')
+                            h5.card-title.pt-3 #{item.title}
+                            p.card-Text #{item.details}
